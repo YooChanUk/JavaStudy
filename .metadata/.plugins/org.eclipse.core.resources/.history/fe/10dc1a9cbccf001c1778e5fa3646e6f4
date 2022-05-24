@@ -1,0 +1,39 @@
+package MidFixStudent;
+import java.util.Scanner;
+
+public class StdManage 
+{
+	Student[] getStudent()
+	{
+		Scanner sc = new Scanner(System.in);
+		int n = 0;
+		String Name, Adress;
+		int Stdnum, Schoolyear, birthday;
+		
+		System.out.print("몇명의 학생이 있습니까? : ");
+		n = sc.nextInt();
+		
+		Student[] std = new Student[n];
+		
+		for(int i = 0; i < std.length; i++)
+		{
+			System.out.print(i+"번째 학생 : ");
+			
+			Stdnum = sc.nextInt();
+			Name = sc.next();
+			Adress = sc.next();
+			Schoolyear = sc.nextInt();
+			birthday = sc.nextInt();
+			
+			std[i] = new Student(Name,Adress,Stdnum,Schoolyear,birthday);
+		}
+		
+		return std;
+	}
+	
+	public void CRUD(Student[] std)
+	{
+		
+	}
+	
+}

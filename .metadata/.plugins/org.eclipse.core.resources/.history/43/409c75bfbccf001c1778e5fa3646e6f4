@@ -1,0 +1,92 @@
+package MidFixStudent;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class StdManage 
+{
+	Student[] getStudent()
+	{
+		Scanner sc = new Scanner(System.in);
+		int n = 0;
+		String Name, Adress;
+		int Stdnum, Schoolyear, birthday;
+		
+		System.out.print("몇명의 학생이 있습니까? : ");
+		n = sc.nextInt();
+		
+		Student[] std = new Student[n];
+		
+		for(int i = 0; i < std.length; i++)
+		{
+			System.out.print(i+"번째 학생 : ");
+			
+			Stdnum = sc.nextInt();
+			Name = sc.next();
+			Adress = sc.next();
+			Schoolyear = sc.nextInt();
+			birthday = sc.nextInt();
+			
+			std[i] = new Student(Name,Adress,Stdnum,Schoolyear,birthday);
+		}
+		
+		return std;
+	}
+	
+	public void CRUD(Student[] std)
+	{
+		int select = 0;
+		Scanner sc = new Scanner(System.in);
+		
+		while(true)
+		{
+			System.out.println("1. Student 데이터 입력");
+			System.out.println("2. Student 리스트 보기");
+			System.out.println("3. Student 번호로 보기");
+			System.out.println("4. 최고령자, 최저연령자 보기");
+			System.out.println("5. 평균입학년도, 중위입학년도 보기");
+			System.out.println("6. 나이순 정렬해서 보기");
+			System.out.println("7. 이름으로 검색");
+			System.out.println("8. 학생 정보 수정하기");
+			System.out.println("0. CRUD종료");
+			System.out.print("선택 : ");
+			
+			try
+			{
+				select = sc.nextInt();
+			}
+			catch(InputMismatchException e)
+			{
+				System.out.println("잘못된 값을 입력하였습니다.");
+				sc.next();
+				continue;
+			}
+
+			
+			switch(select)
+			{
+			case 1: std = sm.getStudent();
+				break;
+			case 2: ss.List(std);
+				break;
+			case 3:	ss.NumSearch(std);
+				break;
+			case 4: scc.BirthdayCompare(std);
+				break;
+			case 5: scc.AvgMid(std);
+				break;
+			case 6: ss.sort(std);
+				break;
+			case 7: ss.NameSearch(std);
+				break;
+			case 8:
+				break;
+			case 0:
+				System.out.println("종료합니다.");
+				sc.close();
+				return;
+			}
+		}
+	}
+	}
+	
+}

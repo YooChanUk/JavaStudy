@@ -1,0 +1,12 @@
+package kunsan.psback0.lecture04;
+
+public class Researcher extends Person
+{
+	public Researcher(String citizenNumber, String name, int birthYear) {
+		super(citizenNumber, name, birthYear);
+		// TODO Auto-generated constructor stub
+	}
+
+	String employeeNumber, dept;
+
+}

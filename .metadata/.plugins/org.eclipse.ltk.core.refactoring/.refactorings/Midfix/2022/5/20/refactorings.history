@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;MidFixStudent.Search&apos; to &apos;ShowSearch&apos;&#x0D;&#x0A;- Original project: &apos;Midfix&apos;&#x0D;&#x0A;- Original element: &apos;MidFixStudent.Search&apos;&#x0D;&#x0A;- Renamed element: &apos;MidFixStudent.ShowSearch&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Search&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;MidFixStudent{Search.java[Search" matchStrategy="1" name="ShowSearch" qualified="false" references="true" similarDeclarations="false" stamp="1652114671540" textual="false" version="1.0"/>
+</session>

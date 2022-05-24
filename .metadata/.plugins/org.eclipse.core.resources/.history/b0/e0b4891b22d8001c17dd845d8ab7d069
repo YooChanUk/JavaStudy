@@ -1,0 +1,44 @@
+package kunsan.psback0.lecture04;
+
+public class Student extends Person
+{
+	String studentNumber, dept;
+	
+	public Student(String citizenNumber, String name, int birthYear) 
+	{
+		super(citizenNumber, name, birthYear);
+		// TODO Auto-generated constructor stub
+	}
+
+	
+
+	@Override
+	public String toString() 
+	{
+		return "Student [studentNumber=" + studentNumber + ", dept=" + dept + "]";
+	}
+
+	public String getStudentNumber() 
+	{
+		return studentNumber;
+	}
+
+	public void setStudentNumber(String studentNumber) 
+	{
+		this.studentNumber = studentNumber;
+	}
+
+	public String getDept() 
+	{
+		return dept;
+	}
+
+	public void setDept(String dept) 
+	{
+		this.dept = dept;
+	}
+	
+	
+	
+
+}

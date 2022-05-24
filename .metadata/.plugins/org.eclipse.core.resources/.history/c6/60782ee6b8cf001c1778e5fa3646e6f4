@@ -1,0 +1,91 @@
+package MidFixStudent;
+
+public class Student 
+{
+	String Name, Adress;
+	int Stdnum, Schoolyear, birthday;
+		
+	public Student(String Name, String Adress, int Stdnum, int Schoolyear, int birthday)
+	{
+		this.Name = Name;
+		this.Adress = Adress;
+		this.Stdnum = Stdnum;
+		this.Schoolyear = Schoolyear;
+		this.birthday = birthday;
+	}
+	
+	public String getName() 
+	{
+		return Name;
+	}
+
+
+
+	public void setName(String name) 
+	{
+		Name = name;
+	}
+
+
+
+	public String getAdress() 
+	{
+		return Adress;
+	}
+
+
+
+	public void setAdress(String adress) 
+	{
+		Adress = adress;
+	}
+
+
+
+	public int getStdnum() 
+	{
+		return Stdnum;
+	}
+
+
+
+	public void setStdnum(int stdnum) 
+	{
+		Stdnum = stdnum;
+	}
+
+
+
+	public int getSchoolyear() 
+	{
+		return Schoolyear;
+	}
+
+
+
+	public void setSchoolyear(int schoolyear) 
+	{
+		Schoolyear = schoolyear;
+	}
+
+
+
+	public int getBirthday() 
+	{
+		return birthday;
+	}
+
+
+
+	public void setBirthday(int birthday) 
+	{
+		this.birthday = birthday;
+	}
+	
+	public void AllShow()
+	{
+		System.out.println(this.Stdnum + " " + this.Name + " " + this.Adress + 
+								" " + this.Schoolyear + " " + this.birthday);
+	}
+
+}

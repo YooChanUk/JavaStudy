@@ -1,0 +1,66 @@
+package MidFixStudent;
+import java.util.Scanner;
+
+public class MainMenu 
+{
+	public void Menu(Student[] std)
+	{
+		Scanner sc = new Scanner(System.in);
+		StdManage sm = new StdManage();
+		StudentList sl = new StudentList();
+		Search s = new Search();
+		HighLow hl = new HighLow();
+		SumMid smm = new SumMid();
+		UseSort us = new UseSort();
+		int select = 0;
+		
+		while(true)
+		{
+			System.out.println("1. Student 데이터 입력");
+			System.out.println("2. Student 리스트 보기");
+			System.out.println("3. Student 번호로 보기");
+			System.out.println("4. 최고령자, 최저연령자 보기");
+			System.out.println("5. 평균입학년도, 중위입학년도 보기");
+			System.out.println("6. 나이순 정렬해서 보기");
+			System.out.println("7. 이름으로 검색");
+			System.out.println("8. 학생 정보 수정하기");
+			System.out.println("0. 종료");
+			System.out.print("선택 : ");
+			select = sc.nextInt();
+			
+			switch(select)
+			{
+			case 1: std = sm.getStudent();
+				break;
+			case 2: sl.List(std);
+				break;
+			case 3:	s.NumSearch(std);
+				break;
+			case 4:hl.com(std);
+				break;
+			case 5:smm.tot(std);
+				break;
+			case 6: us.sort(std);
+				break;
+			case 7:s.NameSearch(std);
+				break;
+			case 8:
+				break;
+			case 0:
+				System.out.println("종료합니다.");
+				sc.close();
+				return;
+			}
+		}
+	}
+
+	
+
+	public static void main(String[] args) 
+	{
+		MainMenu mm = new MainMenu();
+		mm.Menu(null);
+
+	}
+
+}

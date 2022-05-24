@@ -1,0 +1,23 @@
+package MidFixStudent;
+
+import java.util.Scanner;
+
+public class Search 
+{
+	public void search(Student[] std)
+	{
+		Scanner sc = new Scanner(System.in);
+		int n = 0;
+		
+		System.out.print("검색할 학번을 입력해주세요 : ");
+		n = sc.nextInt();
+		
+		for(int i = 0; i < std.length; i++)
+		{
+			if(n == std[i].getStdnum())
+			{
+				std[i].AllShow();
+			}
+		}
+	}
+}

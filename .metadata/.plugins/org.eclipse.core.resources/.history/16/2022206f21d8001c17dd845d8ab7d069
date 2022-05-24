@@ -1,0 +1,30 @@
+package kunsan.psback0.lecture04;
+
+public class Professor extends Researcher
+{
+	public Professor(String citizenNumber, String name, int birthYear) 
+	{
+		super(citizenNumber, name, birthYear);
+		// TODO Auto-generated constructor stub
+	}
+
+	String position;
+
+	public String getPosition() 
+	{
+		return position;
+	}
+
+	public void setPosition(String position) 
+	{
+		this.position = position;
+	}
+
+	@Override
+	public String toString()
+	{
+		return "Professor [position=" + position + "]";
+	}
+	
+	
+}
