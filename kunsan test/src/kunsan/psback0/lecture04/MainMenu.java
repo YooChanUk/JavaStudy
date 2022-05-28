@@ -19,6 +19,7 @@ public class MainMenu
 		BookManagement bm = new BookManagement();
 		DevideByZeroHanding dz = new DevideByZeroHanding();
 		UnivManagement um = new UnivManagement();
+		UnivManagementArray uma = new UnivManagementArray();
 		
 		int menuSelect = 0;
 		
@@ -35,6 +36,7 @@ public class MainMenu
 			System.out.println("8) 학생성적처리 프로그램");
 			System.out.println("9) 책 관리 프로그램");
 			System.out.println("10) 대학 구성원 관리 프로그램");
+			System.out.println("11) 대학 구성원 관리 프로그램(Array)");
 			System.out.println("0) 종료");
 			System.out.print("선택 : ");
 			try
@@ -69,6 +71,8 @@ public class MainMenu
 				case 9 : bm.Menu(null);
 					break;
 				case 10 : um.Menu();
+					break;
+				case 11 : uma.Menu();
 					break;
 				case 0 :
 					System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n");
