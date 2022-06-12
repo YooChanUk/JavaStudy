@@ -20,12 +20,19 @@ public class MainMenu
 		DevideByZeroHanding dz = new DevideByZeroHanding();
 		UnivManagement um = new UnivManagement();
 		UnivManagementArray uma = new UnivManagementArray();
+		MemberManagement mm = new MemberManagement();
+		
+		Member n = null;
 		
 		int menuSelect = 0;
 		
+		 n = mm.login();
+		
 		while(true)
-		{	
+		{
+			
 			System.out.println("o 다음의 프로그램들 중에서 수행할 함수를 선택하세요.");
+			System.out.println("0) 회원 관리 프로그램");
 			System.out.println("1) 커피 메뉴를 넣으면 가격을 출력해 주는 프로그램");
 			System.out.println("2) 입력된 수의 평균과 갯수 구하기해서 화면에 프린트하기");
 			System.out.println("3) 알파벳 A부터 Z까지 프린트하기");
@@ -37,7 +44,7 @@ public class MainMenu
 			System.out.println("9) 책 관리 프로그램");
 			System.out.println("10) 대학 구성원 관리 프로그램");
 			System.out.println("11) 대학 구성원 관리 프로그램(Array)");
-			System.out.println("0) 종료");
+			System.out.println("12) 종료");
 			System.out.print("선택 : ");
 			try
 			{
@@ -52,6 +59,8 @@ public class MainMenu
 			
 			switch(menuSelect)
 			{
+				case 0 : mm.Menu(n);
+					break;
 				case 1 : cp.calcPrice();
 					break;
 				case 2 : ws.getAverage();
@@ -74,7 +83,7 @@ public class MainMenu
 					break;
 				case 11 : uma.Menu();
 					break;
-				case 0 :
+				case 12 :
 					System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n");
 					System.out.println("프로그램을 종료합니다.\n");
 					System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");

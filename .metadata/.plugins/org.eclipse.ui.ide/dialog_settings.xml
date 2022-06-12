@@ -6,6 +6,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\유찬욱\Desktop\practice"/>
 			<item value="C:\Users\유찬욱\eclipse-workspace\kunsan test"/>
 			<item value="C:\Users\유찬욱\Desktop\YooChanUk"/>
 			<item value="C:\Users\유찬욱\eclipse-workspace\YooChanUk\src"/>
