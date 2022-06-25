@@ -68,21 +68,21 @@ public class UnivManagement
 		
 		switch(kind)
 		{
-		case 1 : ps = new Person(citizenNumber,name,birthYear);
+		case 1 : ps = new Person(citizenNumber,name,birthYear, kind);
 			break;
 		case 2 : 
 			System.out.print("학번 입력 : ");
 			studentNumber = sc.next();
 			System.out.print("과(부) 입력 : ");
 			dept = sc.next();
-			ps = new Student(citizenNumber,name,birthYear,studentNumber,dept);
+			ps = new Student(citizenNumber,name,birthYear,studentNumber,dept,kind);
 			break;
 		case 3 : 
 			System.out.print("연구원번호 입력 : ");
 			employeeNumber = sc.next();
 			System.out.print("과(부) 입력 : ");
 			dept = sc.next();
-			ps = new Researcher(citizenNumber,name,birthYear,employeeNumber,dept);
+			ps = new Researcher(citizenNumber,name,birthYear,employeeNumber,dept,kind);
 			break;
 		case 4 : 
 			System.out.print("연구원번호 입력 : ");
@@ -91,7 +91,7 @@ public class UnivManagement
 			dept = sc.next();
 			System.out.print("직책 입력 : ");
 			position = sc.next();
-			ps = new Professor(citizenNumber,name,birthYear,employeeNumber,dept,position);
+			ps = new Professor(citizenNumber,name,birthYear,employeeNumber,dept,position,kind);
 			break;
 		default : 
 			System.out.println("없는 번호 입니다.");

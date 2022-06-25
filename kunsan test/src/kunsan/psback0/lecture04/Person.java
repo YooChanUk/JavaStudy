@@ -7,13 +7,14 @@ public class Person implements Comparable<Person>
 
 	public String citizenNumber = null ,name = null;
 	public int birthYear = 0;
-	//String studentNumber = null, dept = null;
+	int kind = -1;
 	
-	public Person(String citizenNumber, String name, int birthYear)
+	public Person(String citizenNumber, String name, int birthYear, int kind)
 	{
 		this.citizenNumber = citizenNumber;
 		this.name = name;
 		this.birthYear = birthYear;
+		this.kind = kind;
 	}
 
 	@Override
@@ -41,6 +42,14 @@ public class Person implements Comparable<Person>
 		return name;
 	}
 
+	public int getKind() {
+		return kind;
+	}
+
+	public void setKind(int kind) {
+		this.kind = kind;
+	}
+
 	public void setName(String name) 
 	{
 		this.name = name;
@@ -62,9 +71,9 @@ class Student extends Person
 {
 	String studentNumber = null, dept = null;
 	
-	public Student(String citizenNumber, String name, int birthYear, String studentNumber, String dept) 
+	public Student(String citizenNumber, String name, int birthYear, String studentNumber, String dept, int kind) 
 	{
-		super(citizenNumber, name, birthYear);
+		super(citizenNumber, name, birthYear,kind);
 		// TODO Auto-generated constructor stub
 		
 		this.studentNumber = studentNumber;
@@ -104,8 +113,8 @@ class Researcher extends Person
 	public String employeeNumber = null, dept = null;
 	
 	public Researcher(String citizenNumber, String name, int birthYear,
-					String employeeNumber, String dept) {
-		super(citizenNumber, name, birthYear);
+					String employeeNumber, String dept,int kind) {
+		super(citizenNumber, name, birthYear,kind);
 		// TODO Auto-generated constructor stub
 		
 		this.employeeNumber = employeeNumber;
@@ -146,9 +155,10 @@ class Professor extends Researcher
 {
 	String position = null;
 	
-	public Professor(String citizenNumber, String name, int birthYear, String employeeNumber, String dept,String position) 
+	public Professor(String citizenNumber, String name, int birthYear,
+			String employeeNumber, String dept,String position,int kind) 
 	{
-		super(citizenNumber, name, birthYear, employeeNumber, dept);
+		super(citizenNumber, name, birthYear, employeeNumber, dept, kind);
 		// TODO Auto-generated constructor stub
 		
 		this.position = position;
